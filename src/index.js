@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+//import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
+import App from './main/App'
+/*
 import './assets/index.sass';
 
 import NotFound from './components/NotFound';
@@ -18,6 +20,7 @@ import AdministrarInscricoes from './pages/autenticado/administrar/Inscricoes';
 import AdministrarSobre from './pages/autenticado/administrar/Sobre';
 import EventosNovo from './pages/autenticado/eventos/Novo';
 import EventosInscritos from './pages/autenticado/eventos/Inscritos';
+
 
 const fakeAuth = {
   isAuthenticated: false,
@@ -43,32 +46,11 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   )} />
 )
 
-
-ReactDOM.render(
-  <BrowserRouter>
-      <Switch>
-
-          {/* Sobre o aplicativo e autênticação. */}
-          <Route name="sobre" path="/" exact={true} component={Sobre} />
-          <Route name="entrar" path="/entrar" exact={true} component={Entrar} />
-          <Route name="registro" path="/registro" exact={true} component={Registro} />
-
-          {/* Sobre o evento. */}
-          <Route path="/sobre/:slug" component={SobreEvento} />
-          <Route path="/sobre/:slug/inscrever" component={SobreInscrever} />
-
-          {/* Criar eventos e ver os que você está inscrito. */}
-          <PrivateRoute path="/eventos/novo" component={EventosNovo} />
-          <PrivateRoute path="/eventos/inscricao" component={EventosInscritos} />
-          
-          {/* Controle do evento. */}
-          <PrivateRoute path="/administrar/:slug/sobre" component={AdministrarSobre} />
-          <PrivateRoute path="/administrar/:slug/inscricoes" component={AdministrarInscricoes} />
-
-          {/* Erros. */}
-          <Route path='*' component={NotFound} />
-      </Switch>
-  </ BrowserRouter>
+*/
+ReactDOM.render(<App></App>
+  
+ 
+  
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
